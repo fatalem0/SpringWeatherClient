@@ -1,5 +1,7 @@
 package com.fatalem0.SpringWeatherClient.controller;
 
+import com.fatalem0.SpringWeatherClient.model.Weather;
+import com.fatalem0.SpringWeatherClient.service.WeatherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

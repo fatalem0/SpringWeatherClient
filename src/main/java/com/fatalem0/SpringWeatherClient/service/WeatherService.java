@@ -1,11 +1,18 @@
 package com.fatalem0.SpringWeatherClient.service;
 
-import org.springframework.web.client.RestTemplate;
+import com.fatalem0.SpringWeatherClient.model.Weather;
+import com.fatalem0.SpringWeatherClient.weather.WeatherClient;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
+@Service
+@Slf4j
+@RequiredArgsConstructor
 public class WeatherService {
-    private RestTemplate restTemplate;
+    private final WeatherClient weatherClient;
 
     public Weather getWeather() {
-        return null;
+        return weatherClient.getWeatherForCity("Moscow");
     }
 }
